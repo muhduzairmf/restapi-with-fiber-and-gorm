@@ -10,7 +10,10 @@ import (
 
 func userRoute(app *fiber.App) {
 	app.Get("/api/user", routes.GetAllUser)
+	app.Get("/api/user/:id", routes.GetUserById)
 	app.Post("/api/user", routes.CreateUser)
+	app.Patch("/api/user/:id", routes.UpdateUser)
+	app.Delete("/api/user/:id", routes.DeleteUser)
 }
 
 func notFoundRoute(app *fiber.App) {
