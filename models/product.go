@@ -7,5 +7,4 @@ type Product struct {
 	CreatedAt 	 time.Time
 	Name 	  	 string `json:"name"`
 	SerialNumber string `json:"serialNumber"`
-	TotalStock	 uint `json:"totalStock"`
 }

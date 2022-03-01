@@ -77,19 +77,11 @@ func CreateProduct(c *fiber.Ctx) error {
 		})
 	}
 
-	if newProduct.Name == "" || newProduct.SerialNumber == "" || newProduct.TotalStock == 0 {
+	if newProduct.Name == "" || newProduct.SerialNumber == "" {
 		return c.Status(400).JSON(fiber.Map{
 			"status": "Bad request",
-			"message": "Please include name (string), serialNumber (string) and totalStock (integer)",
+			"message": "Please include name (string) and serialNumber (string)",
 			"error": "Important field is empthy",
-		})
-	}
-
-	if newProduct.TotalStock <= 0 {
-		return c.Status(400).JSON(fiber.Map{
-			"status": "Bad request",
-			"message": "The totalStock field must be at least 1 for creating a new product",
-			"error": "totalStock value is less than or equal to 0",
 		})
 	}
 
@@ -158,17 +150,8 @@ func UpdateProduct(c *fiber.Ctx) error {
 		})
 	}
 
-	if updatedProduct.TotalStock < 0 {
-		return c.Status(400).JSON(fiber.Map{
-			"status": "Bad request",
-			"message": "The totalStock field must be at least 0 for updating",
-			"error": "totalStock value is less than 0",
-		})
-	}
-
 	theProduct.Name = updatedProduct.Name
 	theProduct.SerialNumber = updatedProduct.SerialNumber
-	theProduct.TotalStock = updatedProduct.TotalStock
 
 	database.Database.Db.Save(&theProduct)
 
