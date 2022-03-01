@@ -43,20 +43,20 @@ Then, the server will be listening on `http://localhost:3005`.
 
 `GET` : `http://localhost:3005`
 
-`GET` : `http://localhost:3005/api/user`
-`GET` : `http://localhost:3005/api/user/:id`
-`POST` : `http://localhost:3005/api/user`
-`PATCH` : `http://localhost:3005/api/user/:id`
+`GET` : `http://localhost:3005/api/user`  
+`GET` : `http://localhost:3005/api/user/:id`  
+`POST` : `http://localhost:3005/api/user`  
+`PATCH` : `http://localhost:3005/api/user/:id`  
 `DELETE` : `http://localhost:3005/api/user/:id`
 
-`GET` : `http://localhost:3005/api/product`
-`GET` : `http://localhost:3005/api/product/:id`
-`POST` : `http://localhost:3005/api/product`
-`PATCH` : `http://localhost:3005/api/product/:id`
+`GET` : `http://localhost:3005/api/product`  
+`GET` : `http://localhost:3005/api/product/:id`  
+`POST` : `http://localhost:3005/api/product`  
+`PATCH` : `http://localhost:3005/api/product/:id`  
 `DELETE` : `http://localhost:3005/api/product/:id`
 
-`GET` : `http://localhost:3005/api/order`
-`GET` : `http://localhost:3005/api/order/:id`
+`GET` : `http://localhost:3005/api/order`  
+`GET` : `http://localhost:3005/api/order/:id`  
 `POST` : `http://localhost:3005/api/order`
 
 ## References
